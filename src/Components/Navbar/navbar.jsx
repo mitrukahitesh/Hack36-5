@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 import { Transition } from "@headlessui/react";
 
 function navbar() {
@@ -19,14 +20,14 @@ function navbar() {
               <div className="hidden md:block">
                 <div className="flex items-baseline ml-10 space-x-4">
                   <Link
-                    To="#"
+                    to="/"
                     className="px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-gray-700"
                   >
                     Dashboard
                   </Link>
 
                   <Link
-                    to="#"
+                    to="/"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Team
@@ -47,7 +48,7 @@ function navbar() {
                   </Link>
 
                   <Link
-                    href="#"
+                    to="#"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Reports
