@@ -9,7 +9,7 @@ module.exports = {
       },
 
       colors: {
-        'custom-blue' : '#224f80'
+        'custom-blue' : '#0e3054'
       }
     },
   },
