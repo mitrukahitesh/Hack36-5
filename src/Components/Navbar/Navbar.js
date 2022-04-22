@@ -15,8 +15,8 @@ const Navbar = () => {
           <Link to="/" className="flex">
             <img
               src="/logo.png"
-              alt="Crypto Mate Logo"
-              className="w-16 h-16 pt-2 shadow-md md:w-20 md:h-20 md:pt-0"
+              alt="KalaKriti Logo"
+              className="w-16 h-16 pt-2 md:w-16 md:h-16 md:pt-0"
             />
           </Link>
           <button
