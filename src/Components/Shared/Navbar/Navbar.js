@@ -130,10 +130,16 @@ const Navbar = () => {
           */}
             <div className="flex flex-row items-start w-full lg:ml-auto lg:w-auto lg:h-auto">
               <Link
-                to="/signin"
-                className="items-center justify-center w-auto px-4 py-2 mb-3 font-bold rounded text-custom-blue bg-white lg:inline-flex hover:bg-custom-blue hover:text-white hover:ring-2 hover:ring-white ml-2"
+                to="/Login"
+                className="items-center justify-center w-auto px-4 py-2 mb-3 font-bold rounded text-custom-blue bg-white lg:inline-flex hover:bg-custom-blue hover:text-white hover:ring-2 hover:ring-white"
               >
-                Sign In
+                Login
+              </Link>
+              <Link
+                to="/Register"
+                className="items-center justify-center w-auto px-4 py-2 mb-3 font-bold rounded text-custom-blue bg-white lg:inline-flex hover:bg-custom-blue hover:text-white hover:ring-2 hover:ring-white"
+              >
+                Register
               </Link>
             </div>
           </div>
