@@ -9,7 +9,7 @@ const Navbar = () => {
   };
   
   return (
-    <div className="py-10 md:py-16 md:pb-5 navbar">
+    <div className="py-10 md:py-14 md:pb-5 navbar">
       <nav className="fixed inset-x-0 top-0 z-20 px-2 text-sm border-gray-200 pt-1 bg-white">
         <div className="flex flex-wrap items-center justify-between py-1 mx-5 sm:mx-14">
           <Link to="/" className="flex">
