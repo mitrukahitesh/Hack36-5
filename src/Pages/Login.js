@@ -20,17 +20,17 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-col py-5 my-4 bg-opacity-50 rounded-lg shadow bg-custom-blue sm:px-6 md:px-8 lg:px-10">
-        <div className="inline-flex text-4xl font-bold text-center text-custom-green sm:text-3xl">
+    <div className="flex items-center justify-center min-h-screen bg-custom-blue">
+      <div className="flex flex-col py-5 my-4 bg-opacity-50 rounded-lg shadow bg-white sm:px-6 md:px-8 lg:px-10">
+        <div className="inline-flex text-4xl font-bold text-center sm:text-3xl">
           <Link to="/" className="flex">
             <img
               src="/logo.png"
               alt="Kalakriti Logo"
-              className="w-20 h-20 shadow-md"
+              className="w-20 h-20"
             />
           </Link>
-          <span className="self-center mx-auto">Log In</span>
+          <span className="self-center mx-auto text-white">Log In</span>
         </div>
         <div className="p-6">
           <form>
@@ -62,7 +62,7 @@ const Login = () => {
               <div className="flex w-full mb-3">
                 <input
                   type="submit"
-                  className="w-full px-4 py-2 text-center text-white transition duration-200 ease-in rounded-lg shadow-md cursor-pointer bg-custom-green hover:bg-transparent hover:ring-custom-green focus:outline-none hover:ring-2 hover:text-custom-green"
+                  className="w-full px-4 py-2 text-center text-white transition duration-200 ease-in rounded-lg shadow-md cursor-pointer bg-custom-blue hover:bg-transparent hover:ring-white focus:outline-none hover:ring-2"
                   id="create-account-email"
                   value="Login"
                   onClick={(e) => submitForm(e)}
@@ -74,7 +74,7 @@ const Login = () => {
             Don't have an account ?&nbsp;
             <Link
               to="/Register"
-              className="px-1 text-sm text-custom-green hover:text-custom-hover-green"
+              className="px-1 text-sm text-custom-blue"
             >
               Register
             </Link>
