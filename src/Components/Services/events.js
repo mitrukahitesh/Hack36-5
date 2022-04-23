@@ -7,7 +7,7 @@ const events = [
     {
       title: "Live Exhibition",
       svg: '/Icon/exhibition.png',
-      desc: " In-person visual presentation intended for simultaneous viewing by one or more other people. One of the best way that helps you earn visitor's attention and involvement in the items displayed on our platform !",
+      desc: " In-person visual presentation intended for simultaneous viewing by one or more other people that helps you earn visitor's attention and involvement.",
     },
     {
       title: "Buy and Sell",
