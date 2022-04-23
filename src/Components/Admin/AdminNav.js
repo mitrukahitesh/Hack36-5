@@ -1,6 +1,13 @@
+import { GoogleLogout } from "react-google-login";
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
+const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleusercontent.com";
+
 const AdminNav = () => {
+  const onSuccess = () => {
+    console.log("Logged Out Successfully!");
+  }
     function handleclick() {
         let navItem = document.querySelector(".nav_item");
         if(navItem.classList.contains("active")){
@@ -39,9 +46,22 @@ const AdminNav = () => {
                 </a>
     </li>*/}
               <li class="log_out">
-                <a href="#">
+                <a href="/" clientId={clientID}
+            onLogoutSuccess={onSuccess}>
                   <i class='bx bx-log-out'></i>
                   <span class="links_name">Log out</span>
+
+                  <GoogleLogout 
+            clientId={clientID}
+            buttonText = "Logout"
+            style={{
+              border: 'none',
+              background: 'none',
+              padding: 0,
+              margin: 0 
+            }}
+            onLogoutSuccess={onSuccess}
+            />
                 </a>
               </li>
             </ul>

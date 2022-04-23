@@ -32,12 +32,13 @@ const AdminProducts = () => {
     </nav>
       
           <div class="home-content">
-            <button className="bg-custom-blue text-white text-sm float-right mr-6 py-2 px-4 rounded hover:ring-2 hover:ring-custom-blue hover:bg-transparent hover:text-custom-blue"><i className="fas fa-upload"></i> &nbsp;Upload Image</button>
+          <input class="form-control
+    bg-custom-blue text-white text-sm float-right mr-6 py-2 px-4 rounded hover:ring-2 hover:ring-custom-blue hover:bg-transparent hover:text-custom-blue" type="file" id="formFile" />
             <p className="text-3xl mx-6 mb-5 font-semibold">My Works</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-6 gap-10">
               <div className="text-center">
                 <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
-                <p>Name</p>
+                <p>Name</p>er:text-custom-blue">
                 <p>Bidding Price</p>
                 <p>Avaibility Date</p>
               </div>
