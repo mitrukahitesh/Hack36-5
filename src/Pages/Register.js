@@ -11,7 +11,7 @@ const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleuserc
     }
 
     const onFailure= (res) => {
-      console.log("LOGIN FAILED! res:", res);
+      console.log("LOGIN FAILED!", res);
     }
     
   return (
