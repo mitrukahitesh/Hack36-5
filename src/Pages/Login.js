@@ -91,16 +91,16 @@ const Login = () => {
               Register
             </Link>
           </span>
-        </div>
-        <h1 className="self-center mx-auto text-xl text-white">OR</h1>
-        <div className="flex justify-center mt-4">
-          <GoogleLogin 
-          clientId={clientID}
-          buttonText = "Sign In With Google"
-          onSuccess={onSuccess}
-          onFailure={onFailure}
-          cookiePolicy={'single_host_origin'}
-          isSignedIn={true}/>
+          <h1 className="text-center mx-auto my-2 text-xl text-white">OR</h1>
+          <div className="flex justify-center">
+            <GoogleLogin 
+            clientId={clientID}
+            buttonText = "Sign In With Google"
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+            cookiePolicy={'single_host_origin'}
+            isSignedIn={true}/>
+          </div>
         </div>
       </div>
     </div>

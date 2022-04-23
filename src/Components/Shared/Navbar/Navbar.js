@@ -20,7 +20,7 @@ const Navbar = () => {
             />
           </Link>
           <button
-            className="inline-flex float-right p-3 ml-auto text-white rounded outline-none hover:text-white lg:hidden"
+            className="inline-flex float-right p-3 ml-auto text-custom-blue rounded outline-none hover:text-white lg:hidden"
             onClick={handleClick}
           >
             <svg
