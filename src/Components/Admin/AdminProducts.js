@@ -32,127 +32,27 @@ const AdminProducts = () => {
     </nav>
       
           <div class="home-content">
-            <div class="overview-boxes">
-              <div class="box">
-                <div class="right-side">
-                  <div class="box-topic">Highest Bidding</div>
-                  <div class="number">40,876</div>
-                  <div class="indicator">
-                    <i class='bx bx-up-arrow-alt'></i>
-                    <span class="text">Up from yesterday</span>
-                  </div>
-                </div>
-                <i class='bx bx-cart-alt cart'></i>
+          <input class="form-control
+    bg-custom-blue text-white text-sm float-right mr-6 py-2 px-4 rounded hover:ring-2 hover:ring-custom-blue hover:bg-transparent hover:text-custom-blue" type="file" id="formFile" />
+            <p className="text-3xl mx-6 mb-5 font-semibold">My Works</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-6 gap-10">
+              <div className="text-center">
+                <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
+                <p>Name</p>er:text-custom-blue">
+                <p>Bidding Price</p>
+                <p>Avaibility Date</p>
               </div>
-              <div class="box">
-                <div class="right-side">
-                  <div class="box-topic">Total Sales</div>
-                  <div class="number">38,876</div>
-                  <div class="indicator">
-                    <i class='bx bx-up-arrow-alt'></i>
-                    <span class="text">Up from yesterday</span>
-                  </div>
-                </div>
-                <i class='bx bxs-cart-add cart two' ></i>
+              <div className="text-center">
+                <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
+                <p>Name</p>
+                <p>Bidding Price</p>
+                <p>Avaibility Date</p>
               </div>
-              <div class="box">
-                <div class="right-side">
-                  <div class="box-topic">Total Profit</div>
-                  <div class="number">12,876</div>
-                  <div class="indicator">
-                    <i class='bx bx-up-arrow-alt'></i>
-                    <span class="text">Up from yesterday</span>
-                  </div>
-                </div>
-                <i class='bx bx-cart cart three' ></i>
-              </div>
-              <div class="box">
-                <div class="right-side">
-                  <div class="box-topic">Total Return</div>
-                  <div class="number">11,086</div>
-                  <div class="indicator">
-                    <i class='bx bx-down-arrow-alt down'></i>
-                    <span class="text">Down From Today</span>
-                  </div>
-                </div>
-                <i class='bx bxs-cart-download cart four' ></i>
-              </div>
-            </div>
-      
-            <div class="sales-boxes">
-              <div class="recent-sales box">
-                <div class="title">Recent Bidding Sales</div>
-                <div class="sales-details">
-                  <ul class="details">
-                    <li class="topic">Date</li>
-                    <li><a href="#">23 Apr 2022</a></li>
-                    <li><a href="#">23 Apr 2022</a></li>
-                    <li><a href="#">23 Apr 2022</a></li>
-                    <li><a href="#">23 Apr 2022</a></li>
-                  
-                  
-                  </ul>
-                  <ul class="details">
-                  <li class="topic">Customer</li>
-                  <li><a href="#">Shruti Mayank</a></li>
-                  <li><a href="#">Shruti Varshney</a></li>
-                  <li><a href="#">Hitesh Mitruka</a></li>
-                  <li><a href="#">Prashant Singh</a></li>
-                
-                </ul>
-                <ul class="details">
-                  <li class="topic">Sales</li>
-                  <li><a href="#">Delivered</a></li>
-                  <li><a href="#">Pending</a></li>
-                  <li><a href="#">Returned</a></li>
-                  <li><a href="#">Delivered</a></li>
-                
-                </ul>
-                <ul class="details">
-                  <li class="topic">Total</li>
-                  <li><a href="#">Rs 204.98</a></li>
-                  <li><a href="#">Rs 24.55</a></li>
-                  <li><a href="#">Rs 25.88</a></li>
-                  <li><a href="#">Rs 170.66</a></li>
-                  
-                </ul>
-                </div>
-                <div class="button">
-                  <a href="#">See All</a>
-                </div>
-              </div>
-              <div class="top-sales box">
-                <div class="title">Top Selling Bids</div>
-                <ul class="top-sales-details">
-                  <li>
-                  <a href="#">
-                    <img src="/Admin/tibetanpots.jpg" alt="" />
-                    <span class="product">Tibetan Pots</span>
-                  </a>
-                  <span class="price">Rs 1107</span>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="/Admin/mojilpur.jpg" alt="" />
-                    <span class="product">Mojilpur dolls </span>
-                  </a>
-                  <span class="price">Rs 1567</span>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="/Admin/hathi.jpg" alt="" />
-                    <span class="product">Bongua hathi</span>
-                  </a>
-                  <span class="price">Rs 1234</span>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="/Admin/mithila.jpg" alt="" />
-                    <span class="product">Mithila painting</span>
-                  </a>
-                  <span class="price">Rs 2312</span>
-                </li>
-                </ul>
+              <div className="text-center">
+                <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
+                <p>Name</p>
+                <p>Bidding Price</p>
+                <p>Avaibility Date</p>
               </div>
             </div>
           </div>
