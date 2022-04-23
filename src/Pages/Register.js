@@ -1,8 +1,18 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
+import { GoogleLogin } from "react-google-login";
+
+const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleusercontent.com";
 
   const Register = () => {
-    
+
+    const onSuccess = (res) => {
+      console.log("LOGIN SUCCESS! Current user:", res.profileObj);
+    }
+
+    const onFailure= (res) => {
+      console.log("LOGIN FAILED! res:", res);
+    }
     
   return (
     <div className="flex items-center justify-center min-h-screen bg-custom-blue">
@@ -79,6 +89,16 @@ import { Link } from "react-router-dom";
               Login
             </Link>
           </span>
+        </div>
+        <h1 className="self-center mx-auto text-xl text-white">OR</h1>
+        <div className="flex justify-center mt-4" id = "signInButton">
+          <GoogleLogin 
+          clientId={clientID}
+          buttonText = "Sign In With Google"
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={'single_host_origin'}
+          isSignedIn={true}/>
         </div>
       </div>
     </div>

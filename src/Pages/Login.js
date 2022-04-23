@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { GoogleLogin } from "react-google-login";
+
+const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleusercontent.com";
 
 const Login = () => {
+
+    const onSuccess = (res) => {
+      console.log("LOGIN SUCCESS! Current user:", res.profileObj);
+    }
+
+    const onFailure= (res) => {
+      console.log("LOGIN FAILED! res:", res);
+    }
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -51,7 +63,7 @@ const Login = () => {
                 <div className="relative ">
                   <input
                     type="password"
-                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-custom-green focus:border-transparent"
+                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:border-transparent"
                     name="password"
                     value={user.password}
                     onChange={handleChange}
@@ -79,6 +91,16 @@ const Login = () => {
               Register
             </Link>
           </span>
+        </div>
+        <h1 className="self-center mx-auto text-xl text-white">OR</h1>
+        <div className="flex justify-center mt-4">
+          <GoogleLogin 
+          clientId={clientID}
+          buttonText = "Sign In With Google"
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={'single_host_origin'}
+          isSignedIn={true}/>
         </div>
       </div>
     </div>
