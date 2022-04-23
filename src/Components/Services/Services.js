@@ -26,7 +26,7 @@ const Services = () => {
             <p className="text-xl font-bold leading-10 sm:text-3xl md:text-4xl text-center">Services</p>
             <ul
             id="events"
-            className="flex flex-wrap grid grid-cols-3 justify-center gap-10 p-10 px-0 sm:px-5 md:px-16"
+            className="flex flex-wrap mx-5 sm:mx-0 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center gap-10 p-10 px-0 sm:px-5 md:px-16"
             >
             {events.map((event, id) => (
                 <li
