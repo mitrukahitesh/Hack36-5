@@ -40,15 +40,7 @@ const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleuserc
                 </div>
               </div>
               <div className="flex flex-col gap-4 mb-1">
-    
-                <div className="relative">
-                  <input
-                    type="text"
-                    className="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-custom-green focus:border-transparent"
-                    name="username"
-                    placeholder="Username"
-                  />
-                </div>
+
                 <div className="flex flex-col gap-4 mb-1">
                   <div className="relative">
                     <input
@@ -89,16 +81,16 @@ const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleuserc
               Login
             </Link>
           </span>
-        </div>
-        <h1 className="self-center mx-auto text-xl text-white">OR</h1>
-        <div className="flex justify-center mt-4" id = "signInButton">
-          <GoogleLogin 
-          clientId={clientID}
-          buttonText = "Sign In With Google"
-          onSuccess={onSuccess}
-          onFailure={onFailure}
-          cookiePolicy={'single_host_origin'}
-          isSignedIn={true}/>
+          <h1 className="text-center mx-auto my-2 text-xl text-white">OR</h1>
+          <div className="flex justify-center" id = "signInButton">
+            <GoogleLogin 
+            clientId={clientID}
+            buttonText = "Sign In With Google"
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+            cookiePolicy={'single_host_origin'}
+            isSignedIn={true}/>
+          </div>
         </div>
       </div>
     </div>
