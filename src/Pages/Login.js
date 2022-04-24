@@ -8,6 +8,7 @@ const Login = () => {
 
     const onSuccess = (res) => {
       console.log("LOGIN SUCCESS! Current user:", res.profileObj);
+      window.location.href= "/Admin/Dashboard";
     }
 
     const onFailure= (res) => {

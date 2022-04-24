@@ -8,9 +8,10 @@ const AdminNav = () => {
   const onSuccess = () => {
     console.log("Logged Out Successfully!");
   }
-    function logout() {
+    function logout(response) {
       localStorage.clear();
       window.location.href = '/';
+      
     }
     return (  
         <div class="sidebar bg-custom-blue shadow-lg bg-opacity-60">
@@ -50,15 +51,15 @@ const AdminNav = () => {
     </li>*/}
               <li class="log_out">
                 <a href="/" onClick={() => logout()}>
-                  <i class='bx bx-log-out'></i>
-                  <span class="links_name">Log out</span>
+                  {/*<i class='bx bx-log-out'></i>
+  <span class="links_name">Log out</span>*/}
 
-                  {/*<GoogleLogout 
+                  <GoogleLogout 
                   clientId={clientID}
                   buttonText = "Logout"
-                  className="links_name"
+                  className="links_name bg-custom-blue"
                   onLogoutSuccess={onSuccess}
-                />*/}
+                />
                 </a>
               </li>
             </ul>
