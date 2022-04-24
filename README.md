@@ -10,7 +10,7 @@ Intro of the project
 
 ## Demo Video Link:
 
-<a href="https://youtu.be/dQw4w9WgXcQ">Link</a>
+<a href="https://youtu.be/61G9qanROm8">Link</a>
 
 ## Presentation Link:
 
@@ -26,6 +26,7 @@ Intro of the project
 4. Google Cloud Services
 5. Razorpay
 6. Tailwind CSS
+7. Agora SDK
 
 ## Contributors:
 
