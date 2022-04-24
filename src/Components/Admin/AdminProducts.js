@@ -1,7 +1,9 @@
-import React from "react"
+import React,{useState} from "react"
 import "./Dashboard.css"
+import firebaseDB from "../../firebase"
 import AdminNav from "./AdminNav.js"
 const AdminProducts = () => {
+ 
   function handleclick() {
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
@@ -10,6 +12,27 @@ const AdminProducts = () => {
       sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
     } else
       sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+  }
+
+  const[state,setState] = useState({
+    bid: "",
+    available: ""
+  });
+const {bid, available} = state
+   const handleSubmit = (e) =>{
+     e.preventDefault();
+     if(!bid || !available){
+       alert("Please provide the data")
+     }
+     else {
+      firebaseDB.child("art").push(state);
+      setState({ bid: "", available: ""});
+      alert("Form Submitted Successfully");
+    }
+  }
+  const handleInputChange = (e) =>{
+    let{name, value} = e.target;
+    setState({...state, [name]:value})
   }
   return (
     <div>
@@ -48,21 +71,23 @@ const AdminProducts = () => {
                     className="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
                     data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form onSubmit={handleSubmit}>
                 <div className="modal-body relative p-4">
-                  <input type="number" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  <input value={bid} type="number" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     id="bid"
-                    placeholder="Bidding Price"
-                  />      </div>
+                    placeholder="Bidding Price" onChange={handleInputChange}
+                  />
+                  </div>
                 <div className="modal-body relative p-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2" for="date">
                     Availabililty Date
                   </label>
-                  <input type="date" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    id="bid"
-                    placeholder="Availability Date"
+                  <input value={available} type="date" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    id="available"
+                    placeholder="Availability Date" onChange={handleInputChange}
                   />      </div>
                 <div className="modal-body relative p-4">
-                  <input className="form-control w-full bg-custom-blue text-white text-sm py-2 px-4 rounded hover:ring-2 hover:ring-custom-blue hover:bg-transparent hover:text-custom-blue" type="file" id="formFile" />
+                  <input onChange={handleInputChange} className="form-control w-full bg-custom-blue text-white text-sm py-2 px-4 rounded hover:ring-2 hover:ring-custom-blue hover:bg-transparent hover:text-custom-blue" type="file" id="formFile" />
                 </div>
                 <div
                   className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
@@ -82,24 +107,29 @@ const AdminProducts = () => {
           transition
           duration-150
           ease-in-out" data-bs-dismiss="modal">Close</button>
-                  <button type="button" className="px-6
-      py-2.5
-      bg-blue-600
-      text-white
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      rounded
-      shadow-md
-      hover:bg-blue-700 hover:shadow-lg
-      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-      active:bg-blue-800 active:shadow-lg
-      transition
-      duration-150
-      ease-in-out
-      ml-1">Save changes</button>
+           <input
+                              type="submit"
+                              value="Submit"
+                              className="px-6
+                              py-2.5
+                              bg-blue-600
+                              text-white
+                              font-medium
+                              text-xs
+                              leading-tight
+                              uppercase
+                              rounded
+                              shadow-md
+                              hover:bg-blue-700 hover:shadow-lg
+                              focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                              active:bg-blue-800 active:shadow-lg
+                              transition
+                              duration-150
+                              ease-in-out
+                              ml-1"
+                            />
                 </div>
+                </form>
               </div>
             </div>
           </div>
@@ -107,21 +137,21 @@ const AdminProducts = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-6 gap-10">
             <div className="text-center">
               <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
-              <p>Name</p>er:text-custom-blue">
-              <p>Bidding Price</p>
-              <p>Avaibility Date</p>
+              <p>Thomas</p>
+              <p>Rs. 2000</p>
+              <p>Avaibility Date: 18/05/2022</p>
             </div>
             <div className="text-center">
               <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
-              <p>Name</p>
-              <p>Bidding Price</p>
-              <p>Avaibility Date</p>
+              <p>Thomas</p>
+              <p>Rs. 5000</p>
+              <p>Avaibility Date: 20/06/2022</p>
             </div>
             <div className="text-center">
               <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
-              <p>Name</p>
-              <p>Bidding Price</p>
-              <p>Avaibility Date</p>
+              <p>Thomas</p>
+              <p>Rs. 800</p>
+              <p>Avaibility Date: 11/05/2022</p>
             </div>
           </div>
         </div>

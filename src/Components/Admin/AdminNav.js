@@ -49,13 +49,13 @@ const AdminNav = () => {
                 <a href="/" >
                   {/*<i class='bx bx-log-out'></i>
                   <span class="links_name">Log out</span>*/}
-
-                  <GoogleLogout 
+           <div className="flex justify-center links_name w-full" id = "signOutButton">
+            <GoogleLogout 
             clientId={clientID}
             buttonText = "Logout"
-            className="links_name"
             onLogoutSuccess={onSuccess}
             />
+            </div>
                 </a>
               </li>
             </ul>
