@@ -46,20 +46,14 @@ const AdminNav = () => {
                 </a>
     </li>*/}
               <li class="log_out">
-                <a href="/" clientId={clientID}
-            onLogoutSuccess={onSuccess}>
-                  <i class='bx bx-log-out'></i>
-                  <span class="links_name">Log out</span>
+                <a href="/" >
+                  {/*<i class='bx bx-log-out'></i>
+                  <span class="links_name">Log out</span>*/}
 
                   <GoogleLogout 
             clientId={clientID}
             buttonText = "Logout"
-            style={{
-              border: 'none',
-              background: 'none',
-              padding: 0,
-              margin: 0 
-            }}
+            className="links_name"
             onLogoutSuccess={onSuccess}
             />
                 </a>
