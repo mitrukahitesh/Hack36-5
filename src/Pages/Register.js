@@ -8,6 +8,7 @@ const clientID = "581333574404-hhq1vv0d54d4qb3s602asavr3h7aikd8.apps.googleuserc
 
     const onSuccess = (res) => {
       console.log("LOGIN SUCCESS! Current user:", res.profileObj);
+      window.location.href= "/OptionPage";
     }
 
     const onFailure= (res) => {
