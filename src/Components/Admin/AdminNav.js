@@ -22,16 +22,16 @@ const AdminNav = () => {
           </div>
             <ul class="nav-links mt-5">
               <li className="nav_item">
-                <a href="/Admin/Dashboard" className="active" onClick={() => handleclick()}>
+                <NavLink exact to="/Admin/Dashboard" activeClassName="navbar__link--active" className="navbar__link">
                   <i class='bx bx-grid-alt'></i>
                   <span class="links_name">Dashboard</span>
-                </a>
+                </NavLink>
               </li>
               <li className="nav_item">
-                <a href="/Admin/Products" onClick={() => handleclick()}>
+                <NavLink exact to="/Admin/Products" activeClassName="navbar__link--active" className="navbar__link">
                   <i class='bx bx-box' ></i>
                   <span class="links_name"> My Product</span>
-                </a>
+                </NavLink>
               </li>
               {/*<li>
                 <a href="#">
