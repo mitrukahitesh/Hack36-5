@@ -107,7 +107,7 @@ const AdminProducts = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-6 gap-10">
             <div className="text-center">
               <img src="/Banner/art.jpg" className="aspect-[1.4] w-full" alt="Image" />
-              <p>Name</p>er:text-custom-blue">
+              <p>Name</p>
               <p>Bidding Price</p>
               <p>Avaibility Date</p>
             </div>

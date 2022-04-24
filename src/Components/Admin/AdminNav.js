@@ -8,12 +8,9 @@ const AdminNav = () => {
   const onSuccess = () => {
     console.log("Logged Out Successfully!");
   }
-    function handleclick() {
-        let navItem = document.querySelector(".nav_item");
-        if(navItem.classList.contains("active")){
-            navItem.classList.replace("");
-        }else
-            navItem.classList.replace("active");
+    function logout() {
+      localStorage.clear();
+      window.location.href = '/';
     }
     return (  
         <div class="sidebar bg-custom-blue shadow-lg bg-opacity-60">
@@ -22,16 +19,22 @@ const AdminNav = () => {
           </div>
             <ul class="nav-links mt-5">
               <li className="nav_item">
-                <a href="/Admin/Dashboard" className="active" onClick={() => handleclick()}>
+                <NavLink exact to="/Admin/Dashboard" activeClassName="navbar__link--active" className="navbar__link">
                   <i class='bx bx-grid-alt'></i>
                   <span class="links_name">Dashboard</span>
-                </a>
+                </NavLink>
               </li>
               <li className="nav_item">
-                <a href="/Admin/Products" onClick={() => handleclick()}>
+                <NavLink exact to="/Admin/Products" activeClassName="navbar__link--active" className="navbar__link">
                   <i class='bx bx-box' ></i>
                   <span class="links_name"> My Product</span>
-                </a>
+                </NavLink>
+              </li>
+              <li className="nav_item">
+                <NavLink exact to="/" activeClassName="navbar__link--active" className="navbar__link">
+                  <i class='bx bx-camera' ></i>
+                  <span class="links_name"> Live Stream</span>
+                </NavLink>
               </li>
               {/*<li>
                 <a href="#">
@@ -46,16 +49,16 @@ const AdminNav = () => {
                 </a>
     </li>*/}
               <li class="log_out">
-                <a href="/" >
-                  {/*<i class='bx bx-log-out'></i>
-                  <span class="links_name">Log out</span>*/}
+                <a href="/" onClick={() => logout()}>
+                  <i class='bx bx-log-out'></i>
+                  <span class="links_name">Log out</span>
 
-                  <GoogleLogout 
-            clientId={clientID}
-            buttonText = "Logout"
-            className="links_name"
-            onLogoutSuccess={onSuccess}
-            />
+                  {/*<GoogleLogout 
+                  clientId={clientID}
+                  buttonText = "Logout"
+                  className="links_name"
+                  onLogoutSuccess={onSuccess}
+                />*/}
                 </a>
               </li>
             </ul>
